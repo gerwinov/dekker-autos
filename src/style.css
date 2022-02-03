@@ -2,12 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	scroll-behavior: smooth;
+}
+
+a {
+	color: white;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.link-active {
+	text-decoration: none;
+	font-weight: 700;
+}
+
 .gradient {
-	background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+	background: linear-gradient(90deg, theme('colors.da-blue') 0%, theme('colors.da-blue-darken') 100%);
+}
+
+.gradient-orange {
+	background: linear-gradient(135.16deg, theme('colors.da-orange-darken') 0%, theme('colors.da-orange') 100%);
 }
  
 .da-hero {
-	height: 60vh;
+	height: 70vh;
 	background-image: url('./img/hero.jpg');
 }
 
