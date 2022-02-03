@@ -6,3 +6,59 @@
 	background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 }
  
+.da-hero {
+	height: 60vh;
+	background-image: url('./img/hero.jpg');
+}
+
+.da-card-occasions {
+	background-image: url('./img/services/occasions.jpg');
+}
+
+.da-card-apk {
+	background-image: url('./img/services/apk.jpg');
+}
+
+.da-card-airco {
+	background-image: url('./img/services/airco.jpg');
+}
+
+.da-card-onderhoud {
+	background-image: url('./img/services/onderhoud.jpg');
+}
+
+.da-card-merken {
+	background-image: url('./img/services/merken.jpg');
+}
+
+.da-card-banden {
+	background-image: url('./img/services/banden.jpg');
+}
+
+.da-card-oldtimers {
+	background-image: url('./img/services/oldtimers.jpg');
+}
+
+.da-card-meedenken {
+	background-image: url('./img/services/meedenken.jpg');
+}
+
+.da-card-revisie {
+	background-image: url('./img/services/revisie.jpg');
+}
+
+.da-card-klachten {
+	background-image: url('./img/services/klachten.jpg');
+}
+
+.da-gallery-action {
+	background-image: url('./img/porsche/action.jpg');
+}
+
+.da-gallery-blok {
+	background-image: url('./img/porsche/blok.jpg');
+}
+
+.da-gallery-magazijn {
+	background-image: url('./img/porsche/magazijn.jpg');
+}
