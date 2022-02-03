@@ -43,19 +43,19 @@
 				id="nav-content">
 				<ul class="list-reset lg:flex justify-end flex-1 items-center">
 					<li class="mr-3">
-						<a class="inline-block py-2 lg:px-4 link-active" href="#crew">Crew</a>
+						<a class="inline-block py-2 lg:px-4" href="#crew" id="menu-crew">Crew</a>
 					</li>
 					<li class="mr-3">
-						<a class="inline-block py-2 lg:px-4" href="#services">Services</a>
+						<a class="inline-block py-2 lg:px-4" href="#services" id="menu-services">Services</a>
 					</li>
 					<li class="mr-3">
-						<a class="inline-block py-2 lg:px-4" href="#porsche">Porsche specialist</a>
+						<a class="inline-block py-2 lg:px-4" href="#porsche" id="menu-porsche">Porsche specialist</a>
 					</li>
 					<li class="mr-3">
-						<a class="inline-block py-2 lg:px-4" href="#reviews">Reviews</a>
+						<a class="inline-block py-2 lg:px-4" href="#reviews" id="menu-reviews">Reviews</a>
 					</li>
 					<li class="mr-3">
-						<a class="inline-block py-2 lg:px-4" href="#contact">Contact</a>
+						<a class="inline-block py-2 lg:px-4" href="#contact" id="menu-contact">Contact</a>
 					</li>
 				</ul>
 				<a href="tel:+31615141791" class="inline-block lg:inline no-underline mt-6 lg:pt-4 mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
@@ -403,9 +403,37 @@
 		</div>
 	</footer>
 	<script>
-		document.addEventListener("scroll", function () {
-			//to do
-		});
+		function handleIntersect(entries, observer) {
+			entries.forEach((entry) => {
+				const menuEl = document.getElementById('menu-' + entry.target.id);
+				if (menuEl) {
+					if (entry.isIntersecting) {
+						menuEl.classList.add('link-active');
+						return
+					}
+					menuEl.classList.remove('link-active');
+				}
+			});
+		}
+
+		function createObserver(element) {
+			let observer;
+
+			let options = {
+				root: null,
+				threshold: 0.1
+			};
+
+			observer = new IntersectionObserver(handleIntersect, options);
+			observer.observe(element);
+		}
+
+		window.addEventListener("load", () => {
+			const elements = document.querySelectorAll(".da-item");
+			elements.forEach((element) => {
+				createObserver(element);
+			});
+		}, false);
 	</script>
 	<script>
 		/*Toggle dropdown list*/
