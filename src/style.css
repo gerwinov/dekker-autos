@@ -9,7 +9,7 @@ html {
 a {
 	color: white;
 	text-decoration: underline;
-	text-underline-offset: 2px;
+	text-underline-offset: 4px;
 }
 
 a:hover {
