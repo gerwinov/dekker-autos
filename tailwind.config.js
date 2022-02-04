@@ -9,7 +9,7 @@ module.exports = {
 				'da-orange-darken': '#f58028',
 			},
 			spacing: {
-				'1px': '1px',
+				'0.5': '0.125rem',
 			},
 		},
 	},
