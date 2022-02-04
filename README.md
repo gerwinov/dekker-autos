@@ -34,7 +34,7 @@ To build an optimized version of your CSS, simply run:
 
 ```bash
 # Using npm
-npm run production
+npm run prod
 ```
 
 ## Deployment
