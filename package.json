@@ -1,8 +1,14 @@
 {
-  "devDependencies": {
-    "tailwindcss": "^3.0.18"
-  },
-  "scripts": {
-	  "dev": "npx tailwindcss -i ./src/style.css -o ./dist/style.css --watch"
-  }
+	"name": "dekker-autos",
+	"version": "1.0.0",
+	"private": true,
+	"devDependencies": {
+		"push-dir": "^0.4.1",
+		"tailwindcss": "^3.0.18"
+	},
+	"scripts": {
+		"dev": "npx tailwindcss -i ./src/style.css -o ./dist/style.css --watch",
+		"prod": "npx tailwindcss -i ./src/style.css -o ./dist/style.css --minify",
+		"deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+	}
 }
